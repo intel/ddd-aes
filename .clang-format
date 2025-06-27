@@ -1,0 +1,14 @@
+# MIT license
+# Copyright (C) 2025 Intel Corporation
+# SPDX-License-Identifier: MIT
+
+BasedOnStyle: Mozilla
+
+SortIncludes: false
+ColumnLimit: 120
+IndentWidth: 4
+InsertNewlineAtEOF: true
+LineEnding: LF
+AlwaysBreakAfterReturnType: None
+AlwaysBreakAfterDefinitionReturnType: None
+InsertBraces: true

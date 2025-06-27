@@ -1,12 +1,23 @@
 # Contributing
 
-### License
+## Contributing features or fixes
 
-<PROJECT NAME> is licensed under the terms in [LICENSE]<link to license file in repo>. By contributing to the project, you agree to the license and copyright terms therein and release your contribution under these terms.
+All submissions should be made in the form of a pull request related to an open issue. Please limit the content of a
+pull request to the subject of a single issue.
 
-### Sign your work
+## Reporting Bugs
 
-Please use the sign-off line at the end of the patch. Your signature certifies that you wrote the patch or otherwise have the right to pass it on as an open-source patch. The rules are pretty simple: if you can certify
+Bugs or issues may be submitted here: [ddd-aes issues](https://github.com/intel/ddd-aes/issues).
+
+## License
+
+ddd-aes project is licensed under the terms in [LICENSE](./LICENSE). By contributing to the project, you agree to the
+license and copyright terms therein and release your contribution under these terms.
+
+## Sign your work
+
+Please use the sign-off line at the end of the patch. Your signature certifies that you wrote the patch or otherwise
+have the right to pass it on as an open-source patch. The rules are pretty simple: if you can certify
 the below (from [developercertificate.org](http://developercertificate.org/)):
 
 ```

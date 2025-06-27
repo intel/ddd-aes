@@ -1,0 +1,6 @@
+.vscode/
+# CMake build dir
+build/
+
+cov-idir/
+
