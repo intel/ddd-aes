@@ -28,6 +28,16 @@
 #define ALIGN128 __attribute__((aligned(128)))
 #endif
 
+#ifdef _WIN32
+#define NONSTRING
+#else
+// For simplicity we assume that anything that's not MSVC is GCC or compatible.
+// GCC 15 warns if a "string-like" array initializer truncates the NUL terminator.
+// This throws false positives in some of our tests. The attribute is used to explicitly mark relevant arrays
+// and silence the warning.
+#define NONSTRING __attribute__((__nonstring__))
+#endif
+
 #ifdef TEST_INTERNAL_FN_ACCESS
 int xor_h(uint8_t* out, const uint8_t* const in, const size_t len, const uint8_t* const key);
 #endif

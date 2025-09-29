@@ -53,7 +53,7 @@ static void print_array_char(const char* name, const uint8_t* arr, const size_t 
 
 static void test_enc_dec_2blocks()
 {
-    uint8_t plaintext[2 * BLOCKSIZE_BYTES] = "ABCDEFGHIJKLMNOP0123456701234567";
+    uint8_t plaintext[2 * BLOCKSIZE_BYTES] NONSTRING = "ABCDEFGHIJKLMNOP0123456701234567";
     uint8_t ciphertext[2 * BLOCKSIZE_BYTES];
     uint8_t decrypted[2 * BLOCKSIZE_BYTES];
     uint8_t tweak[TWEAKSIZE_BYTES] = { 0x55, 0x55, 0x55, 0x55, 0x55, 0x55, 0x55, 0x55,
@@ -89,7 +89,7 @@ static void test_enc_dec_2blocks()
 
 static void test_enc_dec_3blocks()
 {
-    uint8_t plaintext[3 * BLOCKSIZE_BYTES] = "ABCDEFGHIJKLMNOPabcdefghijklmnop0123456701234567";
+    uint8_t plaintext[3 * BLOCKSIZE_BYTES] NONSTRING = "ABCDEFGHIJKLMNOPabcdefghijklmnop0123456701234567";
     uint8_t ciphertext[3 * BLOCKSIZE_BYTES];
     uint8_t decrypted[3 * BLOCKSIZE_BYTES];
     uint8_t tweak[TWEAKSIZE_BYTES] = { 0x05, 0x55, 0x55, 0x55, 0x55, 0x55, 0x55, 0x55,
@@ -125,7 +125,7 @@ static void test_enc_dec_3blocks()
 
 static void test_enc_dec_2blocks_andone()
 {
-    uint8_t plaintext[2 * BLOCKSIZE_BYTES + 1] = "ABCDEFGHIJKLMNOPX0123456701234567";
+    uint8_t plaintext[2 * BLOCKSIZE_BYTES + 1] NONSTRING = "ABCDEFGHIJKLMNOPX0123456701234567";
     uint8_t ciphertext[2 * BLOCKSIZE_BYTES + 1];
     uint8_t decrypted[2 * BLOCKSIZE_BYTES + 1];
     uint8_t tweak[TWEAKSIZE_BYTES] = { 0x05, 0x55, 0x55, 0x55, 0x55, 0x55, 0x55, 0x55,
@@ -171,7 +171,7 @@ static void test_enc_dec_2blocks_andone()
 /// @brief Test incorrect inputs to ddd_aes_ref_read_encrypt()
 static void test_neg_input_enc()
 {
-    uint8_t plaintext[2 * BLOCKSIZE_BYTES + 1] = "ABCDEFGHIJKLMNOPX0123456701234567";
+    uint8_t plaintext[2 * BLOCKSIZE_BYTES + 1] NONSTRING = "ABCDEFGHIJKLMNOPX0123456701234567";
     uint8_t ciphertext[2 * BLOCKSIZE_BYTES + 1];
     uint8_t tweak[TWEAKSIZE_BYTES] = { 0x05, 0x55, 0x55, 0x55, 0x55, 0x55, 0x55, 0x55,
                                        0x55, 0x55, 0x55, 0x55, 0x55, 0x55, 0x55, 0x55 };
@@ -303,7 +303,7 @@ static void test_neg_input_enc()
 /// @brief Test incorrect inputs to ddd_aes_ref_read_decrypt()
 static void test_neg_input_dec()
 {
-    uint8_t ciphertext[2 * BLOCKSIZE_BYTES + 1] = "ABCDEFGHIJKLMNOPX0123456701234567";
+    uint8_t ciphertext[2 * BLOCKSIZE_BYTES + 1] NONSTRING = "ABCDEFGHIJKLMNOPX0123456701234567";
     uint8_t plaintext[2 * BLOCKSIZE_BYTES + 1];
     uint8_t tweak[TWEAKSIZE_BYTES] = { 0x05, 0x55, 0x55, 0x55, 0x55, 0x55, 0x55, 0x55,
                                        0x55, 0x55, 0x55, 0x55, 0x55, 0x55, 0x55, 0x55 };
