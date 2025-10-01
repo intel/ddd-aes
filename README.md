@@ -27,7 +27,7 @@ only be used for development. Full list of releases is available here: [releases
 If you would like to contribute to the project, please review and abide by the [Code of Conduct](./CODE_OF_CONDUCT.md) and
 see details in the [Contribution Guide](./CONTRIBUTING.md).
 
-#### To build on Linux (CLI, tested on Fedora 41):
+#### To build on Linux (CLI, tested on Fedora 42):
 
 1. Install CMake and GCC
 1. `mkdir build`
