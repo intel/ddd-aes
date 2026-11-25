@@ -4,6 +4,8 @@ This is an experimental reference implementation code for [BBB-]DDD-AES ciphers,
 Being experimental means that some code parts may be doing things differently than a production-ready code would.
 This is done to provide a better illustration of what's possible or to highlight a point.
 
+If you have any questions or suggestions, please contact us via emails listed in the paper.
+
 ### Directory structure
 
 * `<cipher type name>`
@@ -27,7 +29,7 @@ only be used for development. Full list of releases is available here: [releases
 If you would like to contribute to the project, please review and abide by the [Code of Conduct](./CODE_OF_CONDUCT.md) and
 see details in the [Contribution Guide](./CONTRIBUTING.md).
 
-#### To build on Linux (CLI, tested on Fedora 42):
+#### To build on Linux (CLI, tested on Fedora 44):
 
 1. Install CMake and GCC
 1. `mkdir build`
